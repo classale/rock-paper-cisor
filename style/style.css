@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    padding: 5vmin;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+    flex-direction: column;
+}
+
+div.game {
+    position: relative;
+    width: 40vmin;
+    height: 34.64101615137754vmin;
+    background: url(../assets/triangle.svg) center no-repeat;
+    background-size: contain;
+}
+
+div.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain !important;
+}
+
+.game div.button {
+    position: absolute;
+}
+
+div.button > button {
+    background-size: 12.5vmin 12.5vmin !important;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 1000000000000000000000000px;
+}
+
+div.button > button {
+    border: none;
+    padding: 12vmin;
+    border-top: 1vmin solid #00000033;
+}
+
+div.button {
+    width: 30vmin;
+    height: 30vmin;
+    border-radius: 100000000000000000000000000px;
+    border-bottom: 1vmin solid #00000033;
+}
+
+div.button.rock {
+    background-color: #DB2E4D;
+}
+
+div.button.scissors {
+    background-color: #EB9F0E;
+}
+
+div.button.paper {
+    background-color: #4664F4;
+}
+
+div.button.rock > button {
+    background: white  url("../assets/rock.svg") center no-repeat;
+}
+
+div.button.paper > button {
+    background: white url("../assets/paper.svg") center no-repeat;
+}
+
+div.button.scissors > button {
+    background: white url("../assets/scissors.svg") center no-repeat;
+}
+
+.game div.rock {
+    transform: translate(50%, 50%);
+    bottom: 0;
+    right: 50%;
+}
+
+.game div.paper {
+    transform: translate(-50%, -50%);
+    left: 0;
+    top: 0;
+}
+
+.game div.scissors {
+    transform: translate(50%, -50%);
+    right: 0;
+    top: 0;
+}
+
+header {
+    border: 1px solid #ffffff49;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+
+header > .title > h2 {
+    line-height: 1.5rem;
+}
+
+header .title {
+    color: white;
+}
+
+header .score {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    color: #565468;
+}
+
+header .score .scorenum {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+footer button {
+    width: 50vw;
+    color: white;
+    font-size: 2rem;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.play {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width: 720px) {
+    header {
+        width: 50%;
+    }
+
+    .rules {
+        position: absolute;
+        bottom: 5vmin;
+        right: 5vmin;
+        width: 12%;
+    }
+
+    .game {
+        transform: translateY(20px);
+    }
+}

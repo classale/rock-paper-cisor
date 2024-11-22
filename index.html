@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <h2>ROCK</h2>
+                <h2>PAPER</h2>
+                <h2>SCISSORS</h2>
+            </div>
+            <div class="score">
+                <span>score</span>
+                <span class="scorenum">0</span>
+            </div>
+        </header>
+        <main>
+            <div class="game">
+                <div class="button rock">
+                    <button></button>
+                </div>
+                <div class="button paper">
+                    <button></button>
+                </div>
+                <div class="button scissors">
+                    <button></button>
+                </div>
+            </div>
+            <div class="play" style="display: none;">
+
+            </div>
+        </main>
+        <footer>
+            <button class="rules">Rules</button>
+        </footer>
+        <script>
+            const buttons = document.querySelectorAll(".game > div");
+            const play = document.querySelector(".play");
+            const game = document.querySelector("main > .game");
+            for(let button of buttons) {
+                button.addEventListener("click", () => {
+                    play.appendChild(button.cloneNode(true))
+                    const i = Math. ((buttons.length - 1) * Math.random())
+                    console.log(i)
+                    play.appendChild(buttons[i].cloneNode(true))
+                    play.style.display = "flex"
+                    game.style.display = "none"
+                })
+            }
+        </script>
+    </body>
+</html>
