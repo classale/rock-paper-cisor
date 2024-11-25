@@ -44,7 +44,7 @@
             for(let button of buttons) {
                 button.addEventListener("click", () => {
                     play.appendChild(button.cloneNode(true))
-                    const i = Math. ((buttons.length - 1) * Math.random())
+                    const i = Math.round((buttons.length - 1) * Math.random())
                     console.log(i)
                     play.appendChild(buttons[i].cloneNode(true))
                     play.style.display = "flex"
